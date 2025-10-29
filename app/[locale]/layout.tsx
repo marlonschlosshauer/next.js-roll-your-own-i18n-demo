@@ -1,4 +1,5 @@
-import { isLocale, TranslationProvider } from "@/lib/i18n/client";
+import { TranslationProvider } from "@/lib/i18n/client";
+import { isLocale } from "@/lib/i18n/shared";
 import { notFound } from "next/navigation";
 
 export default async function LocaleLayout({
