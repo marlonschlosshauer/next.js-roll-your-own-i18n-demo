@@ -1,23 +1,18 @@
 "use client";
 
 import { createContext, FC, PropsWithChildren, useContext } from "react";
-import { Dictionary, getDictionary, Locale, translate } from "./shared";
+import { translate } from "./shared";
+import { Dictionary } from "./type";
 
 export interface TranslationProviderData {
   dictionary: Dictionary;
 }
 
-export interface TranslationProviderProps {
-  locale: Locale;
-}
-
 const Context = createContext({} as TranslationProviderData);
 
 export const TranslationProvider: FC<
-  PropsWithChildren<TranslationProviderProps>
-> = ({ locale, children }) => {
-  const dictionary = getDictionary(locale);
-
+  PropsWithChildren<TranslationProviderData>
+> = ({ dictionary, children }) => {
   return <Context.Provider value={{ dictionary }}>{children}</Context.Provider>;
 };
 
