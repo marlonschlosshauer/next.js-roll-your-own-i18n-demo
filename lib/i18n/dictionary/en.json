@@ -1,3 +1,4 @@
 {
-  "WELCOME_MESSAGE": "Welcome"
+  "WELCOME_MESSAGE": "Welcome",
+  "MONTHLY_COST": "Starting from {{cost}}€ per month."
 }
